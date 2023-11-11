@@ -18,13 +18,15 @@ RUN python3 -m pipx install poetry
 ENV PATH="/root/.local/bin:${PATH}"
 
 COPY ./pyproject.toml /app
+COPY ./README.md /app
 
-RUN poetry install
+RUN poetry install -n --no-root
 
-COPY ./src /app
+COPY ./market_analysis /app/market_analysis
 COPY ./Makefile /app
 
 RUN make build
+RUN python3 -m pip install . 
 
 COPY ./run.sh /app
 RUN chmod +x /app/run.sh

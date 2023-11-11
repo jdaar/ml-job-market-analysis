@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "market-analysis"
+name = "market_analysis"
 version = "0.1.0"
 description = ""
 authors = ["Jhonatan David <jhonatandaar@gmail.com>"]
@@ -7,7 +7,6 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-
 
 [build-system]
 requires = ["poetry-core"]
