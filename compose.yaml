@@ -1,0 +1,9 @@
+services:
+  worker:
+    build: .
+    volumes:
+      - ./data:/data
+      - ./output:/output
+volumes:
+  data:
+  output:
